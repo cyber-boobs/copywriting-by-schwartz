@@ -1,27 +1,29 @@
 # copywriting-by-schwartz
 
-Скилл для Claude, который пишет рекламу по методике Юджина Шварца из книги *Breakthrough Advertising* (1966).
+**English** · [Русский](README.ru.md)
 
-Шварц считал, что сначала нужен анализ, а текст потом. Поэтому скилл перед тем, как писать, разбирает задачу:
+A Claude skill that writes ads using Eugene Schwartz's method from *Breakthrough Advertising* (1966).
 
-- какое массовое желание уже есть на рынке;
-- на каком уровне осведомлённости находится покупатель (их пять, от «не осознаёт проблему» до «знает продукт и хочет его»);
-- что рынок уже слышал от конкурентов: стадия искушённости и нужен ли новый механизм;
-- с чего поэтому должен начинаться заголовок.
+Schwartz believed the analysis comes first and the copy comes second. So before writing a word, the skill works out:
 
-Только после этого он пишет заголовки (38 способов вербализации) и тело текста (7 техник: Intensification, Identification, Gradualization, Redefinition, Mechanization, Concentration, Camouflage).
+- which mass desire already exists in the market;
+- which of the five levels of awareness the buyer is at, from "unaware of the problem" to "knows the product and wants it";
+- what the market has already heard from competitors: its stage of sophistication, and whether a new mechanism is needed;
+- and so where the headline has to start.
 
-Работает на русском, а тексты пишет на том языке, о котором попросите.
+Only then does it write headlines, using the 38 verbalization techniques, and body copy, using the 7 techniques: Intensification, Identification, Gradualization, Redefinition, Mechanization, Concentration and Camouflage.
 
-## Что умеет
+The skill's instructions are written in Russian, but it writes copy in whatever language you ask for.
 
-- заголовки и наборы для Google Ads RSA (15 × 30 и 4 × 90 символов);
-- креативы и сценарии коротких видео;
-- первый экран лендинга, длинные лендинги, sales letter, VSL;
-- письма;
-- разбор «почему реклама перестала работать» и «как отстроиться, если все обещают одно и то же».
+## What it does
 
-## Установка
+- Headlines and Google Ads RSA sets (15 × 30 and 4 × 90 characters)
+- Ad creatives and short-form video scripts
+- Above-the-fold landing page copy, long-form landing pages, sales letters, VSLs
+- Emails
+- Diagnosing why an ad stopped working, and how to stand out when every competitor promises the same thing
+
+## Installation
 
 ### Claude Code
 
@@ -29,38 +31,38 @@
 git clone https://github.com/cyber-boobs/copywriting-by-schwartz.git ~/.claude/skills/copywriting-by-schwartz
 ```
 
-Обновление:
+To update:
 
 ```bash
 git -C ~/.claude/skills/copywriting-by-schwartz pull
 ```
 
-### Claude.ai и Claude Desktop
+### Claude.ai and Claude Desktop
 
-Скачайте `copywriting-by-schwartz.zip` со страницы [Releases](https://github.com/cyber-boobs/copywriting-by-schwartz/releases) и загрузите его в разделе Skills в настройках.
+Download `copywriting-by-schwartz.zip` from [Releases](https://github.com/cyber-boobs/copywriting-by-schwartz/releases) and upload it under Skills in settings.
 
-## Как пользоваться
+## Usage
 
-Вызовите скилл командой `/copywriting-by-schwartz` или просто упомяните Шварца, уровни осведомлённости или искушённость рынка. Например:
+Run `/copywriting-by-schwartz`, or just mention Schwartz, levels of awareness or market sophistication. For example:
 
-- «По Шварцу: 15 заголовков RSA для eSIM-сервиса, англ., лимит 30 символов»
-- «Почему этот креатив выгорел? Разбери по уровням осведомлённости»
-- «Все конкуренты обещают одно и то же, как отстроиться?»
+- "Using Schwartz, write 15 RSA headlines for an eSIM service, in English, 30-character limit"
+- "Why did this creative burn out? Break it down by awareness level"
+- "Every competitor promises the same thing. How do we stand out?"
 
-Первым делом скилл покажет карту анализа (желание, уровень, стадия, точка входа) и только потом сам текст.
+The skill starts by showing an analysis map (desire, awareness level, sophistication stage, headline entry point) and only then writes the copy.
 
-## Состав
+## Contents
 
-| Файл | О чём |
+| File | What's inside |
 |---|---|
-| `SKILL.md` | методика по шагам, рабочий процесс, чек-лист, чего не делать |
-| `references/awareness-sophistication.md` | массовое желание, 5 уровней осведомлённости, 5 стадий искушённости, их матрица, перенос на каналы |
-| `references/headline-verbalization.md` | 38 способов усилить заголовок, какие под какую стадию, правила для RSA |
-| `references/seven-techniques.md` | 7 техник тела текста |
-| `references/final-touches.md` | Verification, Reinforcement, Interweaving, Sensitivity, Momentum, Mood, короткое видео, финальный чек-лист |
+| `SKILL.md` | the method step by step, workflow, checklist, what not to do |
+| `references/awareness-sophistication.md` | mass desire, 5 levels of awareness, 5 stages of sophistication, how they combine, how they map to channels |
+| `references/headline-verbalization.md` | 38 ways to strengthen a headline, which to use at each stage, rules for RSA |
+| `references/seven-techniques.md` | the 7 body copy techniques |
+| `references/final-touches.md` | Verification, Reinforcement, Interweaving, Sensitivity, Momentum, Mood, short video, final checklist |
 
-## Важно
+## Notes
 
-- Это пересказ и адаптация методики своими словами, а не текст книги. Книга того стоит, её стоит прочитать целиком.
-- Примеры в справочниках условные: цифры заменены на `[N]`, механизмы помечены `[если правда]`. Скилл не переносит их в ваш текст как факты, а факты берёт только из брифа, сайта или ваших ответов.
-- Скилл ссылается на другие скиллы (`copywriting`, `ad-creative`, `copy-editing`, `copywriting-by-shugerman` и другие). Без них он тоже работает, просто не предложит переключиться.
+- This is a retelling and adaptation of the method in my own words, not the text of the book. The book is worth reading in full.
+- The examples in the reference files are illustrative only: numbers are replaced with `[N]` and mechanisms are marked `[если правда]` ("if true"). The skill never carries them into your copy as facts. It takes facts only from your brief, your website or your answers.
+- The skill refers to other skills (`copywriting`, `ad-creative`, `copy-editing`, `copywriting-by-shugerman` and others). It works fine without them; it just won't suggest switching.
